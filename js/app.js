@@ -424,7 +424,7 @@ function submitTest() {
   const gad7Score = state.answers.slice(9, 16).reduce((s, v) => s + v, 0);
   const q9 = state.answers[8];
 
-  const result = buildTestResult(phq9Score, gad7Score, q9, state.impairment);
+  const result = buildTestResult(phq9Score, gad7Score, q9, state.impairment, state.answers);
   saveHistory({
     type: 'PHQ-9+GAD-7',
     phq9Score: phq9Score,

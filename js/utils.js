@@ -62,7 +62,7 @@ function getImpairmentText(value) {
   return found ? found.label : '未填写';
 }
 
-function buildTestResult(phq9Score, gad7Score, q9, impairment) {
+function buildTestResult(phq9Score, gad7Score, q9, impairment, answers) {
   const phq9Severity = getPhq9Severity(phq9Score);
   const gad7Severity = getGad7Severity(gad7Score);
   const impairmentText = getImpairmentText(impairment);
@@ -153,6 +153,7 @@ function buildTestResult(phq9Score, gad7Score, q9, impairment) {
     highlight: phq9Highlight,
     advice,
     q9,
-    hasSafetyConcern
+    hasSafetyConcern,
+    answers
   };
 }
